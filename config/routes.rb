@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resource :scan, only: [:create]
+  get '/products/:upc' => 'products#show'
 end
