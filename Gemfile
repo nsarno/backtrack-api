@@ -47,3 +47,4 @@ group :test do
 end
 
 gem 'factual-api'
+gem 'figaro'
