@@ -3,7 +3,7 @@ require 'factual'
 class ScansController < ApplicationController
 
   def create
-    factual = Factual.new(ENV['factual_api_key'], ENV['factual_api_secret'])
+    factual = Factual.new Figaro.env.factual_api_key, Figaro.env.factual_api_secret
     head :created
   end
 
