@@ -6,8 +6,7 @@ class Product
   attr_accessor :avg_price, :category, :size
 
   def initialize upc
-    # factual = Factual.new Figaro.env.factual_api_key, Figaro.env.factual_api_secret
-    factual = Factual.new 'cDMO63E8rnNuBPpurQXUXm21NMj4EMUbk2S38pIl', 'mxFth9ky2hN1YmEH8pZzL9tRoRw6kuDHnM677j4U'
+    factual = Factual.new Rails.application.secrets[:factual_api_key], Rails.application.secrets[:factual_api_secret]
     factual_product = factual.table('products-cpg').filters('upc' => upc).first
     raise ActiveRecord::RecordNotFound if factual_product.nil?
     @upc = upc
