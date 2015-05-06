@@ -1,12 +1,8 @@
 class ProductsController < ApplicationController
 
   def show
-
-    if factual_product.nil?
-      head :not_found
-    else
-      render json: factual_product
-    end
+    product = Product.new params[:upc]
+    render json: ProductSerializer.new(product).to_json
   end
 
 end
