@@ -16,4 +16,4 @@
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-Splintercell::Application.config.secret_token = '4089f9ee1e0e054dca6ec9979dd55389b471206f3d3ab5b5e3b409bcc040505d48378c0a482aac05e9ea679feceec00610048e350918788978d1c77e4a529fca'
+Backtrack::Application.config.secret_token = '4089f9ee1e0e054dca6ec9979dd55389b471206f3d3ab5b5e3b409bcc040505d48378c0a482aac05e9ea679feceec00610048e350918788978d1c77e4a529fca'
